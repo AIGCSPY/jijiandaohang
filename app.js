@@ -1159,7 +1159,6 @@
     renderLauncher();
     renderCatTabs();
     renderCatLinks();
-    setCatHash(state.activeCat);
     renderRecent();
     startHintRotation();
     bindEvents();
