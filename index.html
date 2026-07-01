@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G123.cn AI 工具导航 | 极简 AI 工具集与个人网址导航</title>
+  <meta name="description" content="G123.cn 是清爽的 AI 工具导航与 AI 工具集主页：收录写作、绘画、视频、编程等分类网址，支持多引擎搜索、个人收藏与书签导入，打造你的极简 AI 导航站。">
+  <meta name="keywords" content="AI导航,AI工具导航,工具导航,AI工具集,网址导航,极简导航,个人导航,AI网站大全,人工智能导航,G123">
+  <meta name="author" content="G123.cn">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#22c55e">
+  <link rel="canonical" href="https://g123.cn/">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="G123.cn">
+  <meta property="og:title" content="G123.cn AI 工具导航">
+  <meta property="og:description" content="清爽的 AI 工具导航与工具集：分类收录、搜索直达、个人收藏，极简 AI 网址导航主页。">
+  <meta property="og:url" content="https://g123.cn/">
+  <meta property="og:image" content="https://g123.cn/android-chrome-512x512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="G123.cn AI 工具导航">
+  <meta name="twitter:description" content="AI 工具导航与工具集：分类网址、搜索收藏、极简个人导航主页。">
+  <meta name="twitter:image" content="https://g123.cn/android-chrome-512x512.png">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "G123.cn AI 工具导航",
+        "url": "https://g123.cn/",
+        "description": "AI 工具导航与 AI 工具集网站，提供写作、绘画、视频、编程等分类网址导航，支持搜索与个人收藏。",
+        "inLanguage": "zh-CN",
+        "publisher": { "@type": "Organization", "name": "G123.cn", "url": "https://g123.cn/" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.baidu.com/s?wd={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "G123.cn AI 工具导航",
+        "url": "https://g123.cn/",
+        "description": "AI 工具导航主页，极简网址导航与工具集，支持搜索、收藏与分类直达。",
+        "inLanguage": "zh-CN",
+        "isPartOf": { "@type": "WebSite", "name": "G123.cn", "url": "https://g123.cn/" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "AI 工具分类导航",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AI 写作工具导航", "description": "大模型写作与对话类 AI 工具网址导航" },
+          { "@type": "ListItem", "position": 2, "name": "AI 绘画工具导航", "description": "AI 绘图与设计类工具网址导航" },
+          { "@type": "ListItem", "position": 3, "name": "AI 视频工具导航", "description": "AI 视频生成与剪辑类工具网址导航" },
+          { "@type": "ListItem", "position": 4, "name": "AI 编程工具导航", "description": "AI 编程与开发类工具网址导航" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="page-home">
+  <p class="top-hint" id="topHint" aria-live="polite"><span class="top-hint-emoji" aria-hidden="true">🎲</span><span class="top-hint-text">不输入关键词按 Enter，随机打开一个 AI 工具</span></p>
+
+  <div class="top-actions">
+    <div class="theme-select-wrap">
+      <button type="button" class="toolbar-btn theme-btn" id="themeTrigger" aria-haspopup="listbox" aria-expanded="false" title="主题">
+        <span id="themeIcon" aria-hidden="true"></span>
+      </button>
+      <div class="theme-dropdown" id="themeDropdown" role="listbox" hidden></div>
+    </div>
+    <button type="button" class="toolbar-btn settings-btn" id="settingsBtn" aria-label="设置" title="设置">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </div>
+
+  <main class="main">
+    <header class="header">
+      <h1 class="brand-heading">
+        <a class="brand" href="https://g123.cn/" target="_blank" rel="nofollow noopener" title="G123.cn">
+          <span class="brand-main">G123</span>
+        </a>
+      </h1>
+      <p class="brand-slogan">极简 AI 工具导航 · 搜索收藏一站直达</p>
+    </header>
+
+    <!-- 搜索 -->
+    <section class="search-section" aria-label="AI 工具搜索">
+      <h2 class="sr-only">搜索</h2>
+      <form id="searchForm" class="search-box" role="search">
+        <div class="search-shell">
+          <div class="engine-select-wrap">
+            <button type="button" class="engine-trigger" id="engineTrigger" aria-haspopup="listbox" aria-expanded="false" title="切换搜索引擎">
+              <img class="engine-trigger-icon" id="engineIcon" src="" alt="">
+              <span class="engine-trigger-name" id="engineName">百度</span>
+              <svg class="engine-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="engine-dropdown" id="engineDropdown" role="listbox" hidden></div>
+          </div>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="输入关键词搜索"
+            autocomplete="off"
+          >
+          <button type="submit" class="search-submit" id="searchSubmit" aria-label="搜索">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- 启动台 -->
+    <section class="block block-fav" aria-label="我的收藏">
+      <h2 class="sr-only">我的收藏</h2>
+      <div class="link-grid" id="launcherGrid"></div>
+    </section>
+
+    <!-- 分类 -->
+    <section class="block block-cat" aria-label="AI 工具分类">
+      <h2 class="sr-only">AI 工具分类</h2>
+      <div class="cat-tabs" id="catTabs" role="tablist"></div>
+      <div class="cat-link-grid" id="catLinks"></div>
+    </section>
+
+    <nav class="nav" id="seoNav" aria-label="AI 工具导航索引">
+      <h2>AI 精选工具</h2>
+      <ul>
+        <li><a href="https://chat.openai.com/" rel="nofollow noopener noreferrer">ChatGPT</a><span class="seo-nav-desc">OpenAI 大模型，对话写作编程</span></li>
+        <li><a href="https://chat.deepseek.com/" rel="nofollow noopener noreferrer">DeepSeek</a><span class="seo-nav-desc">国产大模型，推理能力突出</span></li>
+        <li><a href="https://kimi.moonshot.cn/" rel="nofollow noopener noreferrer">Kimi</a><span class="seo-nav-desc">长文本阅读与智能对话助手</span></li>
+        <li><a href="https://www.doubao.com/" rel="nofollow noopener noreferrer">豆包</a><span class="seo-nav-desc">字节 AI 助手，多模态交互</span></li>
+        <li><a href="https://www.midjourney.com/" rel="nofollow noopener noreferrer">Midjourney</a><span class="seo-nav-desc">顶级 AI 绘画，艺术风出图</span></li>
+        <li><a href="https://cursor.sh/" rel="nofollow noopener noreferrer">Cursor</a><span class="seo-nav-desc">AI 代码编辑器，智能写代码</span></li>
+        <li><a href="https://claude.ai/" rel="nofollow noopener noreferrer">Claude</a><span class="seo-nav-desc">长文写作与分析能力出色</span></li>
+        <li><a href="https://runwayml.com/" rel="nofollow noopener noreferrer">Runway</a><span class="seo-nav-desc">AI 视频生成与创意编辑</span></li>
+        <li><a href="https://jimeng.jianying.com/" rel="nofollow noopener noreferrer">即梦</a><span class="seo-nav-desc">字节出品 AI 视频绘画平台</span></li>
+        <li><a href="https://app.klingai.com/cn/" rel="nofollow noopener noreferrer">可灵AI</a><span class="seo-nav-desc">快手 AI 视频生成工具</span></li>
+        <li><a href="https://www.suno.cn/home/" rel="nofollow noopener noreferrer">Suno</a><span class="seo-nav-desc">AI 音乐创作，文字生成歌曲</span></li>
+        <li><a href="https://github.com/" rel="nofollow noopener noreferrer">GitHub</a><span class="seo-nav-desc">全球最大代码托管协作平台</span></li>
+        <li><a href="https://gamma.app/" rel="nofollow noopener noreferrer">Gamma</a><span class="seo-nav-desc">AI 一键生成演示文稿网页</span></li>
+        <li><a href="https://v0.dev/" rel="nofollow noopener noreferrer">v0</a><span class="seo-nav-desc">AI 生成 React UI 组件界面</span></li>
+        <li><a href="https://tongyi.aliyun.com/" rel="nofollow noopener noreferrer">通义千问</a><span class="seo-nav-desc">阿里云大模型多场景应用</span></li>
+        <li><a href="https://monica.im/" rel="nofollow noopener noreferrer">Monica</a><span class="seo-nav-desc">浏览器 AI 助手，多模型聚合</span></li>
+        <li><a href="https://www.perplexity.ai/" rel="nofollow noopener noreferrer">Perplexity</a><span class="seo-nav-desc">AI 搜索引擎，带引用来源</span></li>
+        <li><a href="https://chatglm.cn/" rel="nofollow noopener noreferrer">智谱清言</a><span class="seo-nav-desc">清华系大模型，对话与创作</span></li>
+      </ul>
+      <h2>AI 写作工具</h2>
+      <ul>
+        <li><a href="https://chat.openai.com/" rel="nofollow noopener noreferrer">ChatGPT</a><span class="seo-nav-desc">OpenAI 大模型，对话写作编程</span></li>
+        <li><a href="https://kimi.moonshot.cn/" rel="nofollow noopener noreferrer">Kimi</a><span class="seo-nav-desc">长文本阅读与智能对话助手</span></li>
+        <li><a href="https://www.doubao.com/" rel="nofollow noopener noreferrer">豆包</a><span class="seo-nav-desc">字节 AI 助手，多模态交互</span></li>
+        <li><a href="https://chatglm.cn/" rel="nofollow noopener noreferrer">智谱清言</a><span class="seo-nav-desc">清华系大模型，对话与创作</span></li>
+        <li><a href="https://yiyan.baidu.com/" rel="nofollow noopener noreferrer">文心一言</a><span class="seo-nav-desc">百度大模型，中文理解强</span></li>
+        <li><a href="https://tongyi.aliyun.com/" rel="nofollow noopener noreferrer">通义千问</a><span class="seo-nav-desc">阿里云大模型多场景应用</span></li>
+        <li><a href="https://chat.deepseek.com/" rel="nofollow noopener noreferrer">DeepSeek</a><span class="seo-nav-desc">国产大模型，推理能力突出</span></li>
+        <li><a href="https://claude.ai/" rel="nofollow noopener noreferrer">Claude</a><span class="seo-nav-desc">长文写作与分析能力出色</span></li>
+        <li><a href="https://yuanbao.tencent.com/" rel="nofollow noopener noreferrer">腾讯元宝</a><span class="seo-nav-desc">腾讯 AI 助手，生态整合</span></li>
+        <li><a href="https://www.wenxiaobai.com/" rel="nofollow noopener noreferrer">问小白</a><span class="seo-nav-desc">简洁易用的 AI 对话助手</span></li>
+        <li><a href="https://xiezuocat.com/" rel="nofollow noopener noreferrer">秘塔写作猫</a><span class="seo-nav-desc">AI 写作润色，自媒体文案</span></li>
+      </ul>
+      <h2>AI 绘画工具</h2>
+      <ul>
+        <li><a href="https://www.midjourney.com/" rel="nofollow noopener noreferrer">Midjourney</a><span class="seo-nav-desc">顶级 AI 绘画，艺术风出图</span></li>
+        <li><a href="https://stability.ai/" rel="nofollow noopener noreferrer">Stable Diffusion</a><span class="seo-nav-desc">开源 AI 绘画，可本地部署</span></li>
+        <li><a href="https://www.liblib.art/" rel="nofollow noopener noreferrer">LiblibAI</a><span class="seo-nav-desc">国内 AI 模型与绘画社区</span></li>
+        <li><a href="https://jimeng.jianying.com/" rel="nofollow noopener noreferrer">即梦</a><span class="seo-nav-desc">字节出品 AI 视频绘画平台</span></li>
+        <li><a href="https://leonardo.ai/" rel="nofollow noopener noreferrer">Leonardo</a><span class="seo-nav-desc">AI 游戏概念艺术设计生成</span></li>
+        <li><a href="https://ideogram.ai/" rel="nofollow noopener noreferrer">Ideogram</a><span class="seo-nav-desc">AI 图像生成，擅长文字排版</span></li>
+        <li><a href="https://app.klingai.com/cn/" rel="nofollow noopener noreferrer">可灵AI</a><span class="seo-nav-desc">快手 AI 视频绘画生成</span></li>
+        <li><a href="https://d.design/" rel="nofollow noopener noreferrer">堆友</a><span class="seo-nav-desc">阿里设计平台，AI 辅助绘图</span></li>
+        <li><a href="https://www.remove.bg/" rel="nofollow noopener noreferrer">Remove.bg</a><span class="seo-nav-desc">AI 一键智能抠图去背景</span></li>
+        <li><a href="https://clipdrop.co/" rel="nofollow noopener noreferrer">Clipdrop</a><span class="seo-nav-desc">AI 图片编辑与增强工具</span></li>
+        <li><a href="https://tongyi.aliyun.com/wanxiang/" rel="nofollow noopener noreferrer">通义万相</a><span class="seo-nav-desc">阿里 AI 绘画，多风格出图</span></li>
+        <li><a href="https://yige.baidu.com/" rel="nofollow noopener noreferrer">文心一格</a><span class="seo-nav-desc">百度 AI 绘画创作平台</span></li>
+      </ul>
+      <h2>AI 视频工具</h2>
+      <ul>
+        <li><a href="https://runwayml.com/" rel="nofollow noopener noreferrer">Runway</a><span class="seo-nav-desc">AI 视频生成与创意编辑</span></li>
+        <li><a href="https://pika.art/" rel="nofollow noopener noreferrer">Pika</a><span class="seo-nav-desc">AI 短视频生成，动效自然</span></li>
+        <li><a href="https://www.capcut.cn/" rel="nofollow noopener noreferrer">剪映</a><span class="seo-nav-desc">字节视频剪辑，AI 智能辅助</span></li>
+        <li><a href="https://member.bilibili.com/york/bilibili-studio/unlogin" rel="nofollow noopener noreferrer">必剪</a><span class="seo-nav-desc">B站免费视频剪辑创作工具</span></li>
+        <li><a href="https://openai.com/sora" rel="nofollow noopener noreferrer">Sora</a><span class="seo-nav-desc">OpenAI 文生视频，效果逼真</span></li>
+        <li><a href="https://lumalabs.ai/" rel="nofollow noopener noreferrer">Luma</a><span class="seo-nav-desc">AI 3D 与视频生成创作</span></li>
+        <li><a href="https://haiper.ai/" rel="nofollow noopener noreferrer">Haiper</a><span class="seo-nav-desc">AI 视频创作与编辑平台</span></li>
+        <li><a href="https://app.klingai.com/cn/" rel="nofollow noopener noreferrer">可灵AI</a><span class="seo-nav-desc">快手 AI 视频生成工具</span></li>
+        <li><a href="https://jimeng.jianying.com/" rel="nofollow noopener noreferrer">即梦</a><span class="seo-nav-desc">字节 AI 视频与绘画创作</span></li>
+        <li><a href="https://xinghuo.xfyun.cn/" rel="nofollow noopener noreferrer">讯飞星火</a><span class="seo-nav-desc">讯飞 AI，文案视频生成</span></li>
+        <li><a href="https://pixverse.ai/" rel="nofollow noopener noreferrer">PixVerse</a><span class="seo-nav-desc">AI 视频生成，动效丰富</span></li>
+        <li><a href="https://www.vidu.cn/" rel="nofollow noopener noreferrer">Vidu</a><span class="seo-nav-desc">国产 AI 视频生成平台</span></li>
+      </ul>
+      <h2>AI 编程工具</h2>
+      <ul>
+        <li><a href="https://cursor.sh/" rel="nofollow noopener noreferrer">Cursor</a><span class="seo-nav-desc">AI 代码编辑器，智能写代码</span></li>
+        <li><a href="https://github.com/" rel="nofollow noopener noreferrer">GitHub</a><span class="seo-nav-desc">全球最大代码托管协作平台</span></li>
+        <li><a href="https://copilot.microsoft.com/" rel="nofollow noopener noreferrer">Copilot</a><span class="seo-nav-desc">微软 AI 编程助手，代码补全</span></li>
+        <li><a href="https://v0.dev/" rel="nofollow noopener noreferrer">v0</a><span class="seo-nav-desc">AI 生成 React UI 组件界面</span></li>
+        <li><a href="https://replit.com/" rel="nofollow noopener noreferrer">Replit</a><span class="seo-nav-desc">在线 IDE，AI 辅助编程</span></li>
+        <li><a href="https://codepen.io/" rel="nofollow noopener noreferrer">CodePen</a><span class="seo-nav-desc">前端代码分享与实时预览</span></li>
+        <li><a href="https://stackoverflow.com/" rel="nofollow noopener noreferrer">Stack Overflow</a><span class="seo-nav-desc">程序员问答与技术社区</span></li>
+        <li><a href="https://huggingface.co/" rel="nofollow noopener noreferrer">Hugging Face</a><span class="seo-nav-desc">AI 模型开源社区与部署</span></li>
+        <li><a href="https://leetcode.cn/" rel="nofollow noopener noreferrer">LeetCode</a><span class="seo-nav-desc">算法刷题与面试备战平台</span></li>
+        <li><a href="https://vercel.com/" rel="nofollow noopener noreferrer">Vercel</a><span class="seo-nav-desc">前端部署平台，Next.js 官方</span></li>
+        <li><a href="https://supabase.com/" rel="nofollow noopener noreferrer">Supabase</a><span class="seo-nav-desc">开源后端即服务，数据库</span></li>
+        <li><a href="https://www.cloudflare.com/" rel="nofollow noopener noreferrer">Cloudflare</a><span class="seo-nav-desc">CDN 加速与边缘计算服务</span></li>
+      </ul>
+      <h2>AI 音乐工具</h2>
+      <ul>
+        <li><a href="https://www.suno.cn/home/" rel="nofollow noopener noreferrer">Suno</a><span class="seo-nav-desc">AI 音乐创作，文字生成歌曲</span></li>
+        <li><a href="https://www.udio.com/" rel="nofollow noopener noreferrer">Udio</a><span class="seo-nav-desc">AI 歌曲生成，风格多样</span></li>
+        <li><a href="https://www.haimian.com/" rel="nofollow noopener noreferrer">海绵音乐</a><span class="seo-nav-desc">字节 AI 音乐，免费创作</span></li>
+        <li><a href="https://www.tiangong.cn/" rel="nofollow noopener noreferrer">天工</a><span class="seo-nav-desc">昆仑万维 AI 音乐与搜索</span></li>
+        <li><a href="https://soundraw.io/" rel="nofollow noopener noreferrer">Soundraw</a><span class="seo-nav-desc">AI 背景音乐，可商用授权</span></li>
+        <li><a href="https://www.aiva.ai/" rel="nofollow noopener noreferrer">AIVA</a><span class="seo-nav-desc">AI 古典与影视配乐生成</span></li>
+        <li><a href="https://www.beatoven.ai/" rel="nofollow noopener noreferrer">Beatoven</a><span class="seo-nav-desc">AI 视频配乐，情绪适配</span></li>
+        <li><a href="https://www.mureka.ai/" rel="nofollow noopener noreferrer">Mureka</a><span class="seo-nav-desc">AI 音乐生成，多语言支持</span></li>
+        <li><a href="https://boomy.com/" rel="nofollow noopener noreferrer">Boomy</a><span class="seo-nav-desc">AI 快速创作与发布音乐</span></li>
+        <li><a href="https://tianyin.music.163.com/" rel="nofollow noopener noreferrer">网易天音</a><span class="seo-nav-desc">网易 AI 音乐创作平台</span></li>
+        <li><a href="https://y.qq.com/tme_studio/" rel="nofollow noopener noreferrer">TME Studio</a><span class="seo-nav-desc">腾讯 AI 音乐创作工具</span></li>
+        <li><a href="https://www.riffusion.com/" rel="nofollow noopener noreferrer">Riffusion</a><span class="seo-nav-desc">AI 实时音乐与音效生成</span></li>
+      </ul>
+      <h2>AI 办公工具</h2>
+      <ul>
+        <li><a href="https://ai.wps.cn/" rel="nofollow noopener noreferrer">WPS AI</a><span class="seo-nav-desc">WPS 内置 AI，文档智能写作</span></li>
+        <li><a href="https://www.notion.so/" rel="nofollow noopener noreferrer">Notion</a><span class="seo-nav-desc">笔记协作，内置 AI 写作辅助</span></li>
+        <li><a href="https://gamma.app/" rel="nofollow noopener noreferrer">Gamma</a><span class="seo-nav-desc">AI 一键生成演示文稿网页</span></li>
+        <li><a href="https://www.aippt.cn/" rel="nofollow noopener noreferrer">AiPPT</a><span class="seo-nav-desc">AI 一键生成演示文稿</span></li>
+        <li><a href="https://www.feishu.cn/" rel="nofollow noopener noreferrer">飞书</a><span class="seo-nav-desc">字节协作办公，集成 AI 助手</span></li>
+        <li><a href="https://docs.qq.com/" rel="nofollow noopener noreferrer">腾讯文档</a><span class="seo-nav-desc">在线文档协作，AI 辅助</span></li>
+        <li><a href="https://shimo.im/" rel="nofollow noopener noreferrer">石墨文档</a><span class="seo-nav-desc">在线文档，团队协作办公</span></li>
+        <li><a href="https://www.yuque.com/" rel="nofollow noopener noreferrer">语雀</a><span class="seo-nav-desc">知识库文档，团队知识管理</span></li>
+        <li><a href="https://www.dingtalk.com/" rel="nofollow noopener noreferrer">钉钉</a><span class="seo-nav-desc">阿里办公平台，AI 助理</span></li>
+        <li><a href="https://www.microsoft.com/microsoft-365" rel="nofollow noopener noreferrer">Microsoft 365</a><span class="seo-nav-desc">Office 套件，Copilot 集成</span></li>
+        <li><a href="https://slack.com/" rel="nofollow noopener noreferrer">Slack</a><span class="seo-nav-desc">团队沟通协作，AI 功能</span></li>
+        <li><a href="https://clickup.com/" rel="nofollow noopener noreferrer">ClickUp</a><span class="seo-nav-desc">项目管理，AI 任务助手</span></li>
+      </ul>
+      <h2>AI 设计工具</h2>
+      <ul>
+        <li><a href="https://www.canva.com/" rel="nofollow noopener noreferrer">Canva</a><span class="seo-nav-desc">在线设计工具，AI 辅助创作</span></li>
+        <li><a href="https://www.figma.com/" rel="nofollow noopener noreferrer">Figma</a><span class="seo-nav-desc">专业 UI 设计，集成 AI 功能</span></li>
+        <li><a href="https://js.design/" rel="nofollow noopener noreferrer">即时设计</a><span class="seo-nav-desc">国产 UI 设计，AI 设计助手</span></li>
+        <li><a href="https://mastergo.com/" rel="nofollow noopener noreferrer">MasterGo</a><span class="seo-nav-desc">团队协作设计，AI 赋能</span></li>
+        <li><a href="https://pixso.cn/" rel="nofollow noopener noreferrer">Pixso</a><span class="seo-nav-desc">产品设计协作，AI 辅助</span></li>
+        <li><a href="https://www.gaoding.com/" rel="nofollow noopener noreferrer">稿定设计</a><span class="seo-nav-desc">在线平面设计，模板丰富</span></li>
+        <li><a href="https://www.chuangkit.com/" rel="nofollow noopener noreferrer">创客贴</a><span class="seo-nav-desc">拖拽式设计，AI 生成素材</span></li>
+        <li><a href="https://www.framer.com/" rel="nofollow noopener noreferrer">Framer</a><span class="seo-nav-desc">网站设计，AI 生成页面</span></li>
+        <li><a href="https://uizard.io/" rel="nofollow noopener noreferrer">Uizard</a><span class="seo-nav-desc">AI 原型设计，草图转界面</span></li>
+        <li><a href="https://www.usegalileo.ai/" rel="nofollow noopener noreferrer">Galileo AI</a><span class="seo-nav-desc">AI 生成 UI 界面设计</span></li>
+        <li><a href="https://motiff.com/" rel="nofollow noopener noreferrer">Motiff</a><span class="seo-nav-desc">AI 设计系统，界面生成</span></li>
+        <li><a href="https://d.design/" rel="nofollow noopener noreferrer">堆友</a><span class="seo-nav-desc">阿里设计平台，AI 辅助绘图</span></li>
+      </ul>
+      <h2>AI 语音工具</h2>
+      <ul>
+        <li><a href="https://www.iflyrec.com/" rel="nofollow noopener noreferrer">讯飞听见</a><span class="seo-nav-desc">语音转文字，会议录音转写</span></li>
+        <li><a href="https://elevenlabs.io/" rel="nofollow noopener noreferrer">ElevenLabs</a><span class="seo-nav-desc">AI 语音合成，多语言配音</span></li>
+        <li><a href="https://www.moyin.com/" rel="nofollow noopener noreferrer">魔音工坊</a><span class="seo-nav-desc">AI 配音，短视频解说神器</span></li>
+        <li><a href="https://www.volcengine.com/product/voice" rel="nofollow noopener noreferrer">火山引擎</a><span class="seo-nav-desc">字节语音合成与识别</span></li>
+        <li><a href="https://azure.microsoft.com/products/ai-services/speech-services" rel="nofollow noopener noreferrer">Azure Speech</a><span class="seo-nav-desc">微软语音服务，TTS/STT</span></li>
+        <li><a href="https://murf.ai/" rel="nofollow noopener noreferrer">Murf</a><span class="seo-nav-desc">AI 配音，企业级语音合成</span></li>
+        <li><a href="https://speechify.com/" rel="nofollow noopener noreferrer">Speechify</a><span class="seo-nav-desc">文字朗读，AI 自然语音</span></li>
+        <li><a href="https://play.ht/" rel="nofollow noopener noreferrer">PlayHT</a><span class="seo-nav-desc">AI 语音克隆与文字转语音</span></li>
+        <li><a href="https://www.resemble.ai/" rel="nofollow noopener noreferrer">Resemble AI</a><span class="seo-nav-desc">AI 语音克隆，定制音色</span></li>
+        <li><a href="https://www.capcut.cn/" rel="nofollow noopener noreferrer">剪映</a><span class="seo-nav-desc">视频配音，AI 智能字幕</span></li>
+        <li><a href="https://www.data-baker.com/" rel="nofollow noopener noreferrer">标贝科技</a><span class="seo-nav-desc">中文语音合成，多音色</span></li>
+        <li><a href="https://openai.com/" rel="nofollow noopener noreferrer">OpenAI</a><span class="seo-nav-desc">Whisper 语音识别，TTS</span></li>
+      </ul>
+      <h2>AI 营销工具</h2>
+      <ul>
+        <li><a href="https://xiezuocat.com/" rel="nofollow noopener noreferrer">秘塔写作猫</a><span class="seo-nav-desc">AI 写作润色，自媒体文案</span></li>
+        <li><a href="https://www.copy.ai/" rel="nofollow noopener noreferrer">Copy.ai</a><span class="seo-nav-desc">AI 营销文案，多语言生成</span></li>
+        <li><a href="https://www.jasper.ai/" rel="nofollow noopener noreferrer">Jasper</a><span class="seo-nav-desc">AI 内容营销，品牌文案</span></li>
+        <li><a href="https://writesonic.com/" rel="nofollow noopener noreferrer">Writesonic</a><span class="seo-nav-desc">AI 广告文案，SEO 内容</span></li>
+        <li><a href="https://www.5118.com/" rel="nofollow noopener noreferrer">5118</a><span class="seo-nav-desc">SEO 关键词，流量分析</span></li>
+        <li><a href="https://www.newrank.cn/" rel="nofollow noopener noreferrer">新榜</a><span class="seo-nav-desc">新媒体数据，内容营销</span></li>
+        <li><a href="https://www.adcreative.ai/" rel="nofollow noopener noreferrer">AdCreative</a><span class="seo-nav-desc">AI 广告创意，素材生成</span></li>
+        <li><a href="https://www.yizzhuan.com/" rel="nofollow noopener noreferrer">易撰</a><span class="seo-nav-desc">自媒体素材，热点追踪</span></li>
+        <li><a href="https://www.ju1.cn/" rel="nofollow noopener noreferrer">句易</a><span class="seo-nav-desc">广告违禁词，文案检测</span></li>
+        <li><a href="https://www.hubspot.com/" rel="nofollow noopener noreferrer">HubSpot</a><span class="seo-nav-desc">营销自动化，AI 助手</span></li>
+        <li><a href="https://www.youmi.net/" rel="nofollow noopener noreferrer">有米云</a><span class="seo-nav-desc">移动营销，素材洞察</span></li>
+        <li><a href="https://www.chanmama.com/" rel="nofollow noopener noreferrer">蝉妈妈</a><span class="seo-nav-desc">直播电商，数据分析</span></li>
+      </ul>
+      <h2>AI 搜索工具</h2>
+      <ul>
+        <li><a href="https://www.perplexity.ai/" rel="nofollow noopener noreferrer">Perplexity</a><span class="seo-nav-desc">AI 搜索引擎，带引用来源</span></li>
+        <li><a href="https://metaso.cn/" rel="nofollow noopener noreferrer">秘塔 AI</a><span class="seo-nav-desc">国产 AI 搜索，无广告干扰</span></li>
+        <li><a href="https://felo.ai/" rel="nofollow noopener noreferrer">Felo</a><span class="seo-nav-desc">AI 搜索，多语言问答</span></li>
+        <li><a href="https://www.phind.com/" rel="nofollow noopener noreferrer">Phind</a><span class="seo-nav-desc">开发者 AI 搜索，代码优先</span></li>
+        <li><a href="https://devv.ai/" rel="nofollow noopener noreferrer">Devv</a><span class="seo-nav-desc">程序员 AI 搜索引擎</span></li>
+        <li><a href="https://you.com/" rel="nofollow noopener noreferrer">You.com</a><span class="seo-nav-desc">AI 搜索，个性化结果</span></li>
+        <li><a href="https://www.tiangong.cn/" rel="nofollow noopener noreferrer">天工 AI</a><span class="seo-nav-desc">昆仑万维 AI 搜索助手</span></li>
+        <li><a href="https://komo.ai/" rel="nofollow noopener noreferrer">Komo</a><span class="seo-nav-desc">AI 搜索，对话式探索</span></li>
+        <li><a href="https://so.360.com/" rel="nofollow noopener noreferrer">360 AI搜索</a><span class="seo-nav-desc">360 AI 搜索，答案直达</span></li>
+        <li><a href="https://andisearch.com/" rel="nofollow noopener noreferrer">Andi</a><span class="seo-nav-desc">AI 搜索，简洁无追踪</span></li>
+        <li><a href="https://exa.ai/" rel="nofollow noopener noreferrer">Exa</a><span class="seo-nav-desc">AI 语义搜索，精准匹配</span></li>
+        <li><a href="https://www.zhihu.com/zhida" rel="nofollow noopener noreferrer">知乎直答</a><span class="seo-nav-desc">知乎 AI 搜索，知识问答</span></li>
+      </ul>
+      <h2>AI 学习工具</h2>
+      <ul>
+        <li><a href="https://www.khanacademy.org/" rel="nofollow noopener noreferrer">Khan Academy</a><span class="seo-nav-desc">免费在线课程，Khanmigo AI</span></li>
+        <li><a href="https://www.duolingo.com/" rel="nofollow noopener noreferrer">Duolingo</a><span class="seo-nav-desc">AI 语言学习，游戏化练习</span></li>
+        <li><a href="https://quizlet.com/" rel="nofollow noopener noreferrer">Quizlet</a><span class="seo-nav-desc">AI 闪卡，记忆与复习</span></li>
+        <li><a href="https://fanyi.youdao.com/" rel="nofollow noopener noreferrer">有道翻译</a><span class="seo-nav-desc">AI 翻译，文档与学习</span></li>
+        <li><a href="https://www.coursera.org/" rel="nofollow noopener noreferrer">Coursera</a><span class="seo-nav-desc">在线课程，名校认证</span></li>
+        <li><a href="https://www.icourse163.org/" rel="nofollow noopener noreferrer">中国大学MOOC</a><span class="seo-nav-desc">国内高校课程，免费学习</span></li>
+        <li><a href="https://notebooklm.google.com/" rel="nofollow noopener noreferrer">NotebookLM</a><span class="seo-nav-desc">Google AI 笔记，资料学习</span></li>
+        <li><a href="https://brilliant.org/" rel="nofollow noopener noreferrer">Brilliant</a><span class="seo-nav-desc">数理思维，互动式学习</span></li>
+        <li><a href="https://www.edx.org/" rel="nofollow noopener noreferrer">edX</a><span class="seo-nav-desc">哈佛 MIT 课程，在线学习</span></li>
+        <li><a href="https://www.zuoyebang.com/" rel="nofollow noopener noreferrer">作业帮</a><span class="seo-nav-desc">AI 搜题，K12 学习辅导</span></li>
+        <li><a href="https://quizgecko.com/" rel="nofollow noopener noreferrer">Quizgecko</a><span class="seo-nav-desc">AI 生成测验，自动出题</span></li>
+        <li><a href="https://tongyi.aliyun.com/read" rel="nofollow noopener noreferrer">通义智文</a><span class="seo-nav-desc">AI 阅读论文，文献总结</span></li>
+      </ul>
+    </nav>
+
+    <section class="block block-recent" id="recentSection" aria-label="最近使用" hidden>
+      <div class="recent-bar">
+        <span class="recent-label">最近</span>
+        <div class="recent-list" id="recentList"></div>
+        <button type="button" class="recent-clear" id="recentClear">清除</button>
+      </div>
+    </section>
+
+    <p class="home-tip">可将本站设为浏览器主页，打开即达常用 AI 工具</p>
+
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="https://g123.cn/" target="_blank" rel="nofollow noopener">G123.cn</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/about/">关于</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/privacy/">隐私</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/submit/">提交</a>
+      </nav>
+      <p class="footer-note">收藏数据保存在浏览器本地，我们不会上传你的个人书签。</p>
+    </footer>
+  </main>
+
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal">
+      <h3>设置</h3>
+      <div class="field">
+        <label>背景色</label>
+        <div class="bg-presets" id="bgPresets"></div>
+        <div class="bg-custom">
+          <input type="color" id="bgColorPicker" value="#f7f7f5" aria-label="自定义背景色">
+          <span>自定义颜色</span>
+        </div>
+      </div>
+      <div class="field">
+        <label>收藏备份</label>
+        <p class="field-hint">换浏览器或清缓存前先导出，数据仅保存在本地。</p>
+        <div class="export-btns">
+          <button type="button" class="btn" id="exportJsonBtn">导出 JSON</button>
+          <button type="button" class="btn" id="exportHtmlBtn">导出 HTML</button>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn" id="bgReset">恢复默认</button>
+        <button type="button" class="btn btn-fill" id="settingsClose">完成</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="addModal">
+    <div class="modal">
+      <div class="modal-head">
+        <h3>添加网站</h3>
+        <button type="button" class="import-btn" id="importBtn">导入书签</button>
+        <input type="file" id="bookmarkFile" class="hidden-input" accept=".html,.htm">
+      </div>
+      <div class="field">
+        <label for="addName">名称</label>
+        <input type="text" id="addName" placeholder="名称">
+      </div>
+      <div class="field">
+        <label for="addUrl">链接</label>
+        <input type="text" id="addUrl" placeholder="https://">
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn" id="addCancel">取消</button>
+        <button type="button" class="btn btn-fill" id="addConfirm">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="editModal">
+    <div class="modal">
+      <h3>修改网站</h3>
+      <div class="field">
+        <label for="editName">名称</label>
+        <input type="text" id="editName" placeholder="名称">
+      </div>
+      <div class="field">
+        <label for="editUrl">链接</label>
+        <input type="text" id="editUrl" placeholder="https://">
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn" id="editCancel">取消</button>
+        <button type="button" class="btn btn-fill" id="editConfirm">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="/categories.js"></script>
+  <script src="/favorites-defaults.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

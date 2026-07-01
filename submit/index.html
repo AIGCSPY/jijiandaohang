@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提交 | G123 AI 工具导航</title>
+  <meta name="description" content="向 G123 AI 工具导航推荐值得收录的 AI 工具或网站。">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#22c55e">
+  <link rel="canonical" href="https://g123.cn/submit">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="doc-back" href="/">← 返回导航</a>
+
+  <div class="top-actions">
+    <div class="theme-select-wrap">
+      <button type="button" class="toolbar-btn theme-btn" id="themeTrigger" aria-haspopup="listbox" aria-expanded="false" title="主题">
+        <span id="themeIcon" aria-hidden="true"></span>
+      </button>
+      <div class="theme-dropdown" id="themeDropdown" role="listbox" hidden></div>
+    </div>
+  </div>
+
+  <main class="main doc-main">
+    <article class="doc">
+      <h1>提交</h1>
+      <p class="doc-lead">发现了好用的 AI 工具？告诉我们，审核通过后会加入分类导航。</p>
+
+      <h2>收录标准</h2>
+      <ul>
+        <li>与 AI 相关，且对用户有实际用途（写作、绘画、视频、编程等）</li>
+        <li>链接可正常访问，页面为官方站点或可信入口</li>
+        <li>非纯广告、钓鱼或明显违规内容</li>
+      </ul>
+      <p>我们会定期整理，不能保证每条提交都会收录，但会认真阅读。</p>
+
+      <form class="submit-form" id="submitForm">
+        <div class="field">
+          <label for="toolName">工具名称 <span aria-hidden="true">*</span></label>
+          <input type="text" id="toolName" name="toolName" required autocomplete="off" placeholder="例如：ChatGPT">
+        </div>
+        <div class="field">
+          <label for="toolUrl">工具网址 <span aria-hidden="true">*</span></label>
+          <input type="url" id="toolUrl" name="toolUrl" required autocomplete="off" placeholder="https://">
+          <p class="field-hint">请填写可直达的完整链接。</p>
+        </div>
+        <div class="field">
+          <label for="toolCat">推荐分类</label>
+          <select id="toolCat" name="toolCat">
+            <option value="精选">精选</option>
+            <option value="写作">写作</option>
+            <option value="绘画">绘画</option>
+            <option value="视频">视频</option>
+            <option value="编程">编程</option>
+            <option value="音乐">音乐</option>
+            <option value="办公">办公</option>
+            <option value="设计">设计</option>
+            <option value="语音">语音</option>
+            <option value="营销">营销</option>
+            <option value="搜索">搜索</option>
+            <option value="学习">学习</option>
+            <option value="其他">其他</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="toolDesc">一句话简介</label>
+          <textarea id="toolDesc" name="toolDesc" placeholder="这个工具主要用来做什么？"></textarea>
+        </div>
+        <div class="field">
+          <label for="contactEmail">你的邮箱（选填）</label>
+          <input type="email" id="contactEmail" name="contactEmail" autocomplete="email" placeholder="方便我们回复审核结果">
+        </div>
+
+        <div class="form-msg" id="formMsg" hidden></div>
+
+        <div class="submit-actions">
+          <button type="submit" class="btn-fill">发送提交</button>
+          <span class="submit-mail">或写信至 <a href="mailto:nav@g123.cn">nav@g123.cn</a></span>
+        </div>
+      </form>
+
+      <p class="doc-updated">点击发送将打开你的邮件客户端，内容不会自动上传到服务器。</p>
+    </article>
+
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="https://g123.cn/" target="_blank" rel="nofollow noopener">G123.cn</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/about/">关于</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/privacy/">隐私</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <a href="/submit/" aria-current="page">提交</a>
+      </nav>
+    </footer>
+  </main>
+
+  <script src="/page.js"></script>
+</body>
+</html>
