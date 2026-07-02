@@ -247,7 +247,7 @@ body.page-home .block-recent {
 }
 
 body.page-home .home-tip {
-  margin: 80px 0 8px;
+  margin: 8px 0 0;
   text-align: center;
   font-size: 12px;
   color: var(--text-3);
@@ -255,7 +255,7 @@ body.page-home .home-tip {
 }
 
 body.page-home .footer {
-  padding-top: 16px;
+  padding-top: 80px;
 }
 
 body.page-home .footer-note {
@@ -508,6 +508,24 @@ body.page-home .footer-note {
   margin-bottom: 80px;
 }
 
+.fav-sort-bar {
+  display: none;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+  padding: 0 2px;
+}
+
+@media (max-width: 859px) {
+  .fav-sort-bar {
+    display: flex;
+  }
+}
+
+.fav-sort-btn[aria-pressed="true"] {
+  color: var(--accent-text);
+  font-weight: 500;
+}
+
 .block-cat {
   margin-top: 12px;
   margin-bottom: 28px;
@@ -607,9 +625,21 @@ body.page-home .footer-note {
 }
 
 .block-fav .link-item--draggable {
-  cursor: grab;
   user-select: none;
-  touch-action: none;
+}
+
+@media (min-width: 860px) {
+  .block-fav .link-item--draggable {
+    cursor: grab;
+    touch-action: none;
+  }
+}
+
+@media (max-width: 859px) {
+  body.is-fav-sort-mode .block-fav .link-item--draggable {
+    cursor: grab;
+    touch-action: none;
+  }
 }
 
 .block-fav .link-item--draggable:active {

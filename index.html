@@ -121,6 +121,9 @@
     <!-- 启动台 -->
     <section class="block block-fav" aria-label="我的收藏">
       <h2 class="sr-only">我的收藏</h2>
+      <div class="fav-sort-bar">
+        <button type="button" class="text-btn fav-sort-btn" id="favSortBtn" aria-pressed="false">排序</button>
+      </div>
       <div class="link-grid" id="launcherGrid"></div>
     </section>
 
@@ -327,8 +330,6 @@
       </div>
     </section>
 
-    <p class="home-tip">可将本站设为浏览器主页，打开即达常用 AI 工具</p>
-
     <footer class="footer">
       <nav class="footer-nav" aria-label="页脚导航">
         <a href="https://g123.cn/" target="_blank" rel="nofollow noopener">G123.cn</a>
@@ -339,6 +340,7 @@
         <span class="footer-sep" aria-hidden="true">·</span>
         <a href="/submit/">提交</a>
       </nav>
+      <p class="home-tip">可将本站设为浏览器主页，打开即达常用 AI 工具</p>
       <p class="footer-note">收藏数据保存在浏览器本地，我们不会上传你的个人书签。</p>
     </footer>
   </main>
@@ -356,7 +358,7 @@
       </div>
       <div class="field">
         <label>收藏备份</label>
-        <p class="field-hint">换浏览器或清缓存前先导出，数据仅保存在本地。</p>
+        <p class="field-hint">换浏览器或清缓存前先导出，自定义收藏仅保存在本地。</p>
         <div class="export-btns">
           <button type="button" class="btn" id="exportJsonBtn">导出 JSON</button>
           <button type="button" class="btn" id="exportHtmlBtn">导出 HTML</button>
@@ -374,7 +376,7 @@
       <div class="modal-head">
         <h3>添加网站</h3>
         <button type="button" class="import-btn" id="importBtn">导入书签</button>
-        <input type="file" id="bookmarkFile" class="hidden-input" accept=".html,.htm">
+        <input type="file" id="bookmarkFile" class="hidden-input" accept=".html,.htm,.json,application/json">
       </div>
       <div class="field">
         <label for="addName">名称</label>
@@ -412,6 +414,7 @@
   <div class="toast" id="toast"></div>
   <script src="/categories.js"></script>
   <script src="/favorites-defaults.js"></script>
+  <script src="/bg-palette.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>

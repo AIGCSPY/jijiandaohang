@@ -53,6 +53,7 @@
     activeCat: 'featured',
     dragMoved: false,
     editingIndex: null,
+    favSortMode: false,
   };
 
   var favDrag = {
@@ -210,6 +211,8 @@
   function applyTheme(mode) {
     document.body.classList.toggle('dark', resolveDark(mode));
     updateThemeBtnUI(mode);
+    var savedBg = getSavedBgColor();
+    if (savedBg && window.G123_bgPalette) window.G123_bgPalette.apply(savedBg);
   }
 
   function initTheme() {
@@ -221,10 +224,10 @@
 
   function applyBgColor(color) {
     if (color) {
-      document.documentElement.style.setProperty('--bg', color);
+      if (window.G123_bgPalette) window.G123_bgPalette.apply(color);
       localStorage.setItem(STORAGE_BG, color);
     } else {
-      document.documentElement.style.removeProperty('--bg');
+      if (window.G123_bgPalette) window.G123_bgPalette.clear();
       localStorage.removeItem(STORAGE_BG);
     }
     syncBgUI(color);
@@ -680,6 +683,49 @@
     }
   }
 
+  function isMobileViewport() {
+    return window.matchMedia('(max-width: 859px)').matches;
+  }
+
+  function isFavDragAllowed() {
+    return !isMobileViewport() || state.favSortMode;
+  }
+
+  function updateFavSortUI() {
+    var btn = $('#favSortBtn');
+    if (!btn) return;
+    var on = state.favSortMode && isMobileViewport();
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.textContent = on ? '完成' : '排序';
+    document.body.classList.toggle('is-fav-sort-mode', on);
+  }
+
+  function setFavSortMode(on) {
+    if (state.favSortMode === on) return;
+    state.favSortMode = on;
+    if (!on) {
+      cleanupFavDragDom();
+      resetFavDrag();
+      state.dragMoved = false;
+    }
+    updateFavSortUI();
+    if (on) toast('按住拖动可调整顺序');
+  }
+
+  function toggleFavSortMode() {
+    setFavSortMode(!state.favSortMode);
+  }
+
+  function onFavViewportChange() {
+    if (!isMobileViewport() && state.favSortMode) {
+      state.favSortMode = false;
+      cleanupFavDragDom();
+      resetFavDrag();
+      state.dragMoved = false;
+    }
+    updateFavSortUI();
+  }
+
   function resetFavDrag() {
     favDrag.el = null;
     favDrag.placeholder = null;
@@ -785,6 +831,7 @@
   }
 
   function onFavPointerDown(e) {
+    if (!isFavDragAllowed()) return;
     if (e.button !== 0) return;
     if (e.target.closest('.fav-menu-wrap')) return;
 
@@ -906,6 +953,7 @@
   }
 
   function onResize() {
+    onFavViewportChange();
     renderCatLinks();
   }
 
@@ -1044,28 +1092,84 @@
     return out;
   }
 
+  function normalizeBookmarkItem(item) {
+    if (!item || typeof item !== 'object') return null;
+    var url = String(item.url || item.link || item.href || '').trim();
+    if (!url) return null;
+    if (!/^https?:\/\//i.test(url)) {
+      if (/^\/\//.test(url)) url = 'https:' + url;
+      else return null;
+    }
+    var name = String(item.name || item.title || item.text || '').trim();
+    if (!name) {
+      try { name = new URL(url).hostname; } catch (e) { return null; }
+    }
+    return { name: name, url: url };
+  }
+
+  function parseBookmarksJson(text) {
+    var data;
+    try { data = JSON.parse(text); } catch (e) { return []; }
+    var items = [];
+    if (Array.isArray(data)) {
+      items = data;
+    } else if (data && typeof data === 'object') {
+      ['favorites', 'bookmarks', 'items', 'links'].some(function (key) {
+        if (Array.isArray(data[key])) {
+          items = data[key];
+          return true;
+        }
+        return false;
+      });
+    }
+    var out = [];
+    var seen = {};
+    items.forEach(function (item) {
+      var normalized = normalizeBookmarkItem(item);
+      if (!normalized) return;
+      var key = hostPath(normalized.url);
+      if (seen[key]) return;
+      seen[key] = true;
+      out.push(normalized);
+    });
+    return out;
+  }
+
+  function parseImportFile(content, filename) {
+    var name = (filename || '').toLowerCase();
+    var tryJson = name.endsWith('.json') || /^\s*[\[{]/.test(content);
+    if (tryJson) {
+      var fromJson = parseBookmarksJson(content);
+      if (fromJson.length || name.endsWith('.json')) return fromJson;
+    }
+    return parseBookmarksHtml(content);
+  }
+
+  function mergeImportedBookmarks(imported) {
+    if (!imported.length) { toast('未找到有效书签'); return; }
+    ensureEditableFavorites();
+    var added = 0;
+    imported.forEach(function (item) {
+      if (!state.favorites.some(function (f) { return hostPath(f.url) === hostPath(item.url); })) {
+        state.favorites.push(item);
+        added++;
+      }
+    });
+    if (added) {
+      saveFavorites();
+      renderLauncher();
+      closeAddModal();
+      toast('已导入 ' + added + ' 个');
+    } else {
+      toast('没有新书签');
+    }
+  }
+
   function importBookmarks(file) {
     if (!file) return;
     var reader = new FileReader();
     reader.onload = function () {
-      var imported = parseBookmarksHtml(reader.result);
-      if (!imported.length) { toast('未找到有效书签'); return; }
-      ensureEditableFavorites();
-      var added = 0;
-      imported.forEach(function (item) {
-        if (!state.favorites.some(function (f) { return hostPath(f.url) === hostPath(item.url); })) {
-          state.favorites.push(item);
-          added++;
-        }
-      });
-      if (added) {
-        saveFavorites();
-        renderLauncher();
-        closeAddModal();
-        toast('已导入 ' + added + ' 个');
-      } else {
-        toast('没有新书签');
-      }
+      mergeImportedBookmarks(parseImportFile(reader.result, file.name));
     };
     reader.readAsText(file);
   }
@@ -1112,6 +1216,7 @@
         closeEditModal();
         closeSettingsModal();
         closeAllFavMenus();
+        if (state.favSortMode) setFavSortMode(false);
       }
     });
     $('#themeTrigger').addEventListener('click', function (e) {
@@ -1145,6 +1250,8 @@
     $('#editModal').addEventListener('click', function (e) {
       if (e.target === $('#editModal')) closeEditModal();
     });
+    var favSortBtn = $('#favSortBtn');
+    if (favSortBtn) favSortBtn.addEventListener('click', toggleFavSortMode);
   }
 
   function init() {
@@ -1162,6 +1269,7 @@
     renderRecent();
     startHintRotation();
     bindEvents();
+    updateFavSortUI();
     window.addEventListener('resize', onResize);
     window.addEventListener('hashchange', applyCatFromHash);
   }

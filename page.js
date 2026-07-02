@@ -43,6 +43,8 @@
   function applyTheme(mode) {
     document.body.classList.toggle('dark', resolveDark(mode));
     updateThemeBtnUI(mode);
+    var savedBg = localStorage.getItem(STORAGE_BG);
+    if (savedBg && window.G123_bgPalette) window.G123_bgPalette.apply(savedBg);
   }
 
   function renderThemeDropdown() {
@@ -91,9 +93,9 @@
 
   function applyBgColor(color) {
     if (color) {
-      document.documentElement.style.setProperty('--bg', color);
-    } else {
-      document.documentElement.style.removeProperty('--bg');
+      if (window.G123_bgPalette) window.G123_bgPalette.apply(color);
+    } else if (window.G123_bgPalette) {
+      window.G123_bgPalette.clear();
     }
   }
 
