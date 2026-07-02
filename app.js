@@ -33,7 +33,7 @@
   ];
 
   var FUN_HINTS = [
-    { emoji: '🎲', text: '不输入关键词按 Enter，随机打开一个 AI 工具' },
+    { emoji: '🎲', text: '点击 G123，随机探索一个 AI 工具' },
     { emoji: '⌨️', text: '⌘K / Ctrl+K 聚焦搜索 · Esc 关闭弹层' },
     { emoji: '⭐', text: '分类工具悬停右上角星标，一键加入收藏' },
     { emoji: '⭐', text: '收藏常用网址，打造你的专属导航' },
@@ -1174,14 +1174,22 @@
     reader.readAsText(file);
   }
 
+  function handleBrandRandom(e) {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    var pick = randomFunLink();
+    recordRecent(pick);
+    window.open(pick.url, '_blank');
+    toast('随机打开：' + pick.name);
+  }
+
   function handleSearch(e) {
     e.preventDefault();
     var q = $('#searchInput').value.trim();
     if (!q) {
-      var pick = randomFunLink();
-      recordRecent(pick);
-      window.open(pick.url, '_blank');
-      toast('随机打开：' + pick.name);
+      var input = $('#searchInput');
+      if (input) input.focus();
+      toast('请输入关键词');
       return;
     }
     var eng = SEARCH_ENGINES.find(function (x) { return x.id === state.engine; }) || SEARCH_ENGINES[0];
@@ -1189,6 +1197,8 @@
   }
 
   function bindEvents() {
+    var brandRandom = $('#brandRandom');
+    if (brandRandom) brandRandom.addEventListener('click', handleBrandRandom);
     $('#searchForm').addEventListener('submit', handleSearch);
     $('#engineTrigger').addEventListener('click', function (e) {
       e.stopPropagation();
