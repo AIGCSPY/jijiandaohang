@@ -381,7 +381,7 @@
   function clearRecent() {
     saveRecentList([]);
     renderRecent();
-    toast('已清除最近记录');
+    toast('已清除历史记录');
   }
 
   function renderRecent() {
