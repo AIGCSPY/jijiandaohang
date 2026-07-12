@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="image.png" alt="G123.cn" width="120">
+  <img src="image.png" alt="G123.cn">
 </p>
 
 <h1 align="center">G123.cn AI 工具导航</h1>
