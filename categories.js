@@ -30,9 +30,9 @@ window.G123_CATEGORIES = [
         "desc": "顶级 AI 绘画，艺术风出图"
       },
       {
-        "name": "Cursor",
-        "url": "https://cursor.sh/",
-        "desc": "AI 代码编辑器，智能写代码"
+        "name": "G123",
+        "url": "https://g123.cn/",
+        "desc": "G123极简导航"
       },
       {
         "name": "Claude",

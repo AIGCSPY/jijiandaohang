@@ -4,7 +4,7 @@ window.G123_DEFAULT_FAVORITES = [
   { name: 'Kimi', url: 'https://kimi.moonshot.cn/' },
   { name: 'DeepSeek', url: 'https://chat.deepseek.com/' },
   { name: '豆包', url: 'https://www.doubao.com/' },
-  { name: 'Cursor', url: 'https://cursor.sh/' },
+  { name: 'G123', url: 'https://g123.cn' },
   { name: 'Claude', url: 'https://claude.ai/' },
   { name: 'Midjourney', url: 'https://www.midjourney.com/' },
   { name: 'GitHub', url: 'https://github.com/' },
