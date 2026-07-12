@@ -801,9 +801,9 @@ window.G123_CATEGORIES = [
         "desc": "哈佛 MIT 课程，在线学习"
       },
       {
-        "name": "作业帮",
-        "url": "https://www.zuoyebang.com/",
-        "desc": "AI 搜题，K12 学习辅导"
+        "name": "AI工具网",
+        "url": "https://www.ai138.com/",
+        "desc": "AI工具导航"
       },
       {
         "name": "Quizgecko",
